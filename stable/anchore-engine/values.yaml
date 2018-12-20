@@ -22,9 +22,7 @@ postgresql:
 anchoreGlobal:
   # Image used for all anchore engine deployments (excluding enterprise components).
   image:
-    # Can use 'latest' tag but not recommended
-    repository: docker.io/anchore/anchore-engine
-    tag: v0.3.1
+    name: docker.io/anchore/anchore-engine:v0.3.1
     pullPolicy: IfNotPresent
 
   # Create an ingress resource for all external anchore engine services.
@@ -325,8 +323,7 @@ anchoreEnterpriseGlobal:
   imagePullSecretName: anchore-enterprise-pullcreds
 
   image:
-    repository: docker.io/anchore/enterprise
-    tag: v0.3.1
+    name: docker.io/anchore/enterprise:v0.3.2
     pullPolicy: IfNotPresent
 
 # Configure the second postgres database instance for the enterprise feeds service.
@@ -435,8 +432,7 @@ anchoreEnterpriseUi:
   enableSharedLogin: true
 
   image:
-    repository: docker.io/anchore/enterprise-ui
-    tag: v0.3.1
+    name: docker.io/anchore/enterprise-ui:v0.3.1
     pullPolicy: IfNotPresent
 
   # kubernetes service configuration for anchore UI

@@ -21,7 +21,7 @@ For a description of each component, view the official documentation at: [Anchor
 ## Installing the Anchore Engine OSS Chart
 TL;DR - `helm install stable/anchore-engine`
 
-Anchore Engine will take approximately 3 minutes to bootstrap. After the initial bootstrap period, Anchore Engine will begin a vulnerability feed sync. During this time, image analysis will show zero vulnerabilities until the sync is completed. This sync can take multiple hours depending on which feeds are enabled. The following anchore-cli command is available to poll the system and report back when the engine is bootstrapped and the vulnerability feeds are all synced up. `anchore-cli system wait`
+Anchore Engine will take approximately 3 minutes to bootstrap. After the initial bootstrap period Anchore Engine will begin a vulnerability feed sync. During this time image analysis will show zero vulnerabilities until the sync is completed. This sync can take multiple hours depending on which feeds are enabled. The following anchore-cli command is available to poll the system and report back when the engine is bootstrapped and the vulnerability feeds are all synced up. `anchore-cli system wait`
 
 
 The recommended way to install the Anchore Engine Chart is with a customized values file and a custom release name. Create a new file named `anchore_values.yaml` and add all desired custom values (examples below); then run the following command:

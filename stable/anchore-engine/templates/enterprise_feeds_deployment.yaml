@@ -39,7 +39,7 @@ spec:
       - name: {{ .Values.anchoreEnterpriseGlobal.imagePullSecretName }}
       containers:
       - name: {{ .Chart.Name }}-{{ $component }}
-        image: "{{ .Values.anchoreEnterpriseGlobal.image.repository }}:{{ .Values.anchoreEnterpriseGlobal.image.tag }}"
+        image: {{ .Values.anchoreEnterpriseGlobal.image.name }}
         imagePullPolicy: {{ .Values.anchoreEnterpriseGlobal.image.pullPolicy }}
         command: ["/usr/local/bin/anchore-enterprise-manager"]
         args: ["service", "start", "feeds"]

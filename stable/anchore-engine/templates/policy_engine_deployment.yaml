@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
       - name: {{ .Chart.Name }}-{{ $component }}
-        image: {{ .Values.anchoreGlobal.image.repository }}:{{ .Values.anchoreGlobal.image.tag }}
+        image: {{ .Values.anchoreGlobal.image.name }}
         imagePullPolicy: {{ .Values.anchoreGlobal.image.pullPolicy }}
         command: ["/usr/local/bin/anchore-manager"]
         args: ["service", "start", "policy_engine"]

@@ -38,7 +38,7 @@ spec:
       - name: {{ .Values.anchoreEnterpriseGlobal.imagePullSecretName }}
       containers:
       - name: {{ .Chart.Name }}-{{ $component }}
-        image: {{ .Values.anchoreEnterpriseUi.image.repository }}:{{ .Values.anchoreEnterpriseUi.image.tag }}
+        image: {{ .Values.anchoreEnterpriseUi.image.name }}
         imagePullPolicy: {{ .Values.anchoreEnterpriseUi.image.pullPolicy }}
         env:
         - name: REDIS_PASSWORD
